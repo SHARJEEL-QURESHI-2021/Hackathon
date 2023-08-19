@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Blogs</title>
+    <link id='favicon' rel="shortcut icon" href="../img/favicon1.png" type="image/x-png">
+    <!-- CSS LINK -->
+    <!-- <link rel="stylesheet" href="./CSS/index.css"> -->
+
+    <!-- FONT AWESOME LINk -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- BOOTSTRAPS LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: rgb(219, 219, 219);
+            margin: 0px;
+            padding-bottom: 30px;
+        }
+
+        #nav {
+            width: 100%;
+            height: 70px;
+            background-color: #ffffff;
+            color: #000000;
+            font-size: 50px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        #lag {
+            font-size: 30px;
+            font-weight: bold;
+            color: rebeccapurple;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 60px;
+            cursor: pointer;
+        }
+
+        a {
+            font-size: medium;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        #use {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 70px;
+            padding-right: 70px;
+            background-color: rgb(56, 16, 148);
+            color: #fff;
+            font-size: large;
+            height: 40px;
+            align-items: center;
+        }
+
+        #main {
+            width: 1000px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0.4rem 1rem 1rem -0.4rem rgba(255, 255, 255, 0.849);
+            margin-top: 20px;
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+
+        .inp {
+            width: 940px;
+            height: 40px;
+            border-radius: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            font-size: larger;
+            border: none;
+            border: 1px solid rgb(159, 161, 159);
+            margin-bottom: 17px;
+        }
+
+        input::placeholder {
+            color: gray;
+            font-size: large;
+        }
+
+        textarea {
+            font-size: larger;
+            margin-bottom: 17px;
+            border: none;
+            border: 1px solid rgb(159, 161, 159);
+            padding: 10px;
+        }
+
+        #description::placeholder {
+            color: gray;
+            font-size: large;
+        }
+
+
+        #btn {
+            width: 20%;
+            height: 50px;
+            margin-top: 15px;
+            background-color: rgb(56, 16, 148);
+            font-size: medium;
+            border: none;
+            border-radius: 9px;
+            color: #fff;
+        }
+
+        #btn:hover {
+            background-color: rgb(0, 0, 0);
+            color: gold;
+            cursor: pointer;
+        }
+
+        input:hover {
+            border: 1px solid rebeccapurple;
+        }
+
+        #aa {
+            text-align: start;
+            margin-left: 180px;
+            font-family: cursive;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        #log {
+            background-color: rgb(56, 16, 148);
+            border: none;
+            font-size: medium;
+            color: #ffffff;
+        }
+
+        #log:hover {
+            text-decoration: underline;
+        }
+
+        #card {
+            width: 1000px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0.4rem 1rem 1rem -0.4rem rgba(255, 255, 255, 0.849);
+            margin-top: 20px;
+            padding-bottom: 50px;
+            padding-top: 50px;
+            margin-left: 180px;
+            padding: 10px;
+        }
+
+        img {
+            width: 70px;
+            height: 70px;
+        }
+        #any{
+            display: flex;
+            column-gap: 50px;
+            align-items: flex-start;
+
+            width: 70%;
+            flex-direction: row;
+        }
+        h3{
+            text-align: start;
+            font-weight: bold;
+        }
+        p{
+            color: #858585;
+            font-size: 18px;
+        }
+        #showDesc{
+            font-size: larger;
+            color: #353434;
+            padding: 10px;
+        }
+        #del{
+            border: none;
+            background-color: white;
+            color: rgb(61, 29, 241);
+        }
+        #edit{
+            border: none;
+            background-color: white;
+            color: rgb(61, 29, 241);
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="use">
+        <small>Personal Blogging App</small><a href="./LogIn.html"><button id="log">LogIn</button></a>
+    </nav>
+    <nav id="nav">
+        <span id="lag" onclick="location.replace(`./Dashboard.html`)"> Back to all blogs </span>
+    </nav>
+    <div id="aa">
+        <h2>All from <span id="username"></span></h2>
+    </div>
+    <div id="show">
+
+    </div>
+
+
+    <!-- JS File Link -->
+    <script type="module" src="../JS/Userblogs.js"></script>
+
+    <!-- JAVA SCRIPT LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
